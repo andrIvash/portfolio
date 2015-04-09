@@ -1,0 +1,65 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-fb {
+    width: 47px;
+    height: 47px;
+    background-position: -5px -5px;
+}
+
+.sprite-fb-hover {
+    width: 47px;
+    height: 47px;
+    background-position: -62px -5px;
+}
+
+.sprite-git {
+    width: 47px;
+    height: 47px;
+    background-position: -5px -62px;
+}
+
+.sprite-git-hover {
+    width: 47px;
+    height: 47px;
+    background-position: -62px -62px;
+}
+
+.sprite-lock {
+    width: 20px;
+    height: 32px;
+    background-position: -119px -5px;
+}
+
+.sprite-lock-in {
+    width: 20px;
+    height: 32px;
+    background-position: -119px -47px;
+}
+
+.sprite-twitter {
+    width: 47px;
+    height: 47px;
+    background-position: -149px -5px;
+}
+
+.sprite-twitter-hover {
+    width: 47px;
+    height: 47px;
+    background-position: -149px -62px;
+}
+
+.sprite-vk {
+    width: 47px;
+    height: 47px;
+    background-position: -5px -119px;
+}
+
+.sprite-vk-hover {
+    width: 47px;
+    height: 47px;
+    background-position: -62px -119px;
+}
