@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
 	wiredep = require('wiredep').stream,
-	prefix = require('gulp-autoprefixer'),
 	livereload = require('gulp-livereload'),
   useref = require('gulp-useref'),
   gulpif = require('gulp-if'),
@@ -62,7 +61,6 @@ gulp.task('connect', function() {
 //css
 gulp.task('css', function () {
 	gulp.src('./app/css/*.css')
-  .pipe(prefix('last 5 versions', '> 1%', 'ie 8')) 
   .pipe(connect.reload());
         
 });
