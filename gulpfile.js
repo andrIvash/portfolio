@@ -16,28 +16,37 @@ gulp.task('bower', function () {
 gulp.task('connect', function() {
   connect.server({
     root: 'app',
-    livereload: true
+    livereload: true,
+    port: 8888
+  
   });
 });
 
+//css
 gulp.task('css', function () {
-	gulp.src('css/*.css')
-    .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
-    .pipe(connect.reload());
+	gulp.src('./app/css/*.css')
+  .pipe(connect.reload());
         
 });
 
 //html
 gulp.task('html', function () {
-	gulp.src('app/index.html')
+	gulp.src('./app/*.html')
 	.pipe(connect.reload());
-})
+});
+
+//js
+gulp.task('js', function () {
+  gulp.src('./app/js/*.js')
+  .pipe(connect.reload());
+});
 
 //watch
 gulp.task('watch', function () {
-	gulp.watch('bower.json', ['bower']);
-	gulp.watch('css/*.css', ['css']);
-	gulp.watch('app/index.html', ['css']);
+	gulp.watch('bower.json', ['bower'])
+	gulp.watch('./app/css/*.css', ['css'])
+  gulp.watch('./app/js/*.js', ['js'])
+	gulp.watch(['./app/*.html'], ['html']);
 })
 //default
-gulp.task('default', ['connect', 'html', 'css', 'watch']);
+gulp.task('default', ['connect', 'watch'])
