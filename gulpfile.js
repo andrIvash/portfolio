@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 gulp.task('build', ['clean'], function () {
   var assets = useref.assets();
 
-  gulp.src('./app/**/*.*')
+  gulp.src('./app/*.*')
     .pipe(assets)
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', minifyCss()))
@@ -62,6 +62,7 @@ gulp.task('connect', function() {
 //css
 gulp.task('css', function () {
 	gulp.src('./app/css/*.css')
+  .pipe(prefix('last 5 versions', '> 1%', 'ie 8')) 
   .pipe(connect.reload());
         
 });
