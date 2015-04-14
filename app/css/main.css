@@ -1,5 +1,6 @@
 .wrapper {
-	width:90%;
+	width:1400px;
+
 	margin: 0 auto;
 }
 html {
@@ -9,13 +10,13 @@ html {
 
 /* header _____________________________________________________________________*/
 .b-page-header {
-	width: 1400px;
+	/*width: 1400px;*/
 	min-height: 119px;
 	background-color: #eff3f7;
 	margin: 0 auto;
 }
 .b-page-content {
-	width:1400px;
+	/*width:1400px;*/
 	margin: 0 auto;
 	
 }
@@ -185,7 +186,7 @@ html {
 }
 /* content  _____________________________________________________________________*/
 
-.b-content {
+.b-content  {
 	float: right;
 	width: 650px;
 }
@@ -253,10 +254,14 @@ html {
 }
 .b-privat-info__item-data {
 	padding-left: 18px;
-	color: #4a545d;
+	color: #555f67;
 	font-family: 'fira_sansbook';
     font-size: 15px;
+    font-weight: 600;
 }
+.my-name {
+	color: #37424d;
+	}
 .b-key-list {
 	list-style: none;
 	padding: 0;
@@ -274,6 +279,7 @@ html {
 	color: #fff;
 	font-family: 'fira_sansmedium';
     font-size: 14px;
+    font-weight: 400;
     text-align: center;
 	background: rgb(59,168,192); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(59,168,192,1) 1%, rgba(59,168,192,1) 50%, rgba(46,140,162,1) 51%, rgba(46,140,162,1) 100%); /* FF3.6+ */
@@ -292,7 +298,7 @@ html {
 }
 
 .b-work-info__item {
-	background: url('../img/suit.png') no-repeat 58px top;
+	background:url('../img/suit.png') no-repeat 58px top;
 }
 .b-work-info__item:last-child {
 	padding-bottom: 45px;
@@ -302,6 +308,8 @@ html {
 	color:#4a545d;
 	font-family: 'fira_sansbook';
     font-size: 17px;
+    font-weight: 600;
+
 	
 }
 .b-work-info__item-when {
@@ -310,6 +318,7 @@ html {
 	color:#4a545d;
 	font-family: 'fira_sanslight';
     font-size: 15px;
+    font-weight: 600;
 }
 /* content  _   study info____________________________________________________________________*/
 
@@ -318,10 +327,10 @@ html {
 }
 
 .b-study-info__item.uni-study {
-	background: url('../img/course.png') no-repeat 58px top;
+	background:url('../img/course.png') no-repeat 58px top;
 }
 .b-study-info__item.course-study {
-	background: url('../img/study.png') no-repeat 65px top;
+	background:url('../img/study.png') no-repeat 65px top;
 }
 .b-study-info__item:last-child {
 	padding-bottom: 45px;
@@ -329,18 +338,24 @@ html {
 .b-study-info__item-where {
 	padding-left: 125px;
 	color:#4a545d;
+	font-family: 'fira_sansbook';
+    font-size: 17px;
+    font-weight: 600;
 	
 }
 .b-study-info__item-when {
 	padding-left: 125px;
 	padding-bottom: 26px;
 	color:#4a545d;
+	font-family: 'fira_sanslight';
+    font-size: 15px;
+    font-weight: 600;
 }
 
 
 /* footer _____________________________________________________________________*/
 .b-page-footer {
- width: 1400px;
+ /*width: 1400px;*/
  min-height: 78px;
  background-color: #eff3f7;
  text-align: center;
@@ -360,6 +375,12 @@ html {
     font-size: 13px;
 	
 }
+/* job -page _____________________________________________________________________*/
+.b-content.job-page .b-content__section{
+	min-height: 839px;
+}
+
+/* clear _____________________________________________________________________*/
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
