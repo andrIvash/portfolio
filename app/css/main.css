@@ -127,7 +127,8 @@ html {
 
 .b-contacts {
 	width: 250px;
-	
+	font-family: 'fira_sansbook';
+	font-style: normal;
 }
 
 .b-contacts__list {
@@ -154,16 +155,14 @@ html {
   color:#fff;
   top: 7px;
   left:83px;
-  font-family: 'fira_sansbook';
-    font-size: 17px;
+  font-size: 17px;
 
 }
 .b-contacts__item-header {
-	font-family: 'fira_sansbook';
-    font-size: 21px;
 	position: absolute;
 	top: 6px;
 	left:21px;
+	font-size:21px;
 }
 .b-contacts__list-item-link:first-child {
 	border-radius: 6px 6px 0 0;
