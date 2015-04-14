@@ -1,5 +1,5 @@
 .wrapper {
-	width:1400px;
+	min-width:1200px;
 
 	margin: 0 auto;
 }
@@ -91,13 +91,15 @@ html {
 	border-radius: 6px 6px 0 0;
 }
 
-.b-navigation__item:nth-child(1):before, .b-navigation__item:last-child:before {
+/*.b-navigation__item:nth-child(1):before, */.b-navigation__item:last-child:before {
 	content:"";
   	display:block;
   	height: 2px;
   	width: 224px;
   	margin-left: 10px;
   	background: #3ba8c0;
+  	position: absolute;
+  	top:-2px;
 }
 .b-navigation__item:last-child {
 	border-radius: 0 0 6px 6px;
@@ -209,10 +211,15 @@ html {
 	color: #3ba8c0;
 	border-bottom: 2px solid #3ba8c0;
 	height:42px;
+	padding:22px 22px 7px 22px;
+	
+
+} 
+.b-content__section-header h2 {
 	font-family: 'fira_sansbook';
     font-size: 27px;
-    padding: 22px 22px 25px 22px;
-
+    font-weight: normal;
+    margin: 0;
 }
 .b-content__section-article {
 	padding-top :98px;
@@ -288,6 +295,7 @@ html {
 	background: -ms-linear-gradient(top,  rgba(59,168,192,1) 1%,rgba(59,168,192,1) 50%,rgba(46,140,162,1) 51%,rgba(46,140,162,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(59,168,192,1) 1%,rgba(59,168,192,1) 50%,rgba(46,140,162,1) 51%,rgba(46,140,162,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 ); /* IE6-9 */
+
 }
 
 /* content  _   work info____________________________________________________________________*/
@@ -378,7 +386,104 @@ html {
 .b-content.job-page .b-content__section{
 	min-height: 839px;
 }
+.b-jobs { 
+	margin: 0;
+	padding-left: 20px;
+	padding-top: 8px;
 
+}
+.b-jobs__item {
+	display: inline-block;
+	margin-right: 30px;
+	width: 180px;
+	margin-bottom: 30px;
+	float: left;
+	position: relative;
+	
+}
+.b-jobs__item-bg {
+	position: absolute;
+	margin:0;
+	top:0;
+	left:0;
+	width: 184px;
+	z-index: 99;
+	display: none;
+	background-color: rgba( 1, 108, 164, 0.549 );
+	border-radius: 6px 6px 6px 6px;
+	text-align: center;
+	padding: 55px 0; 
+	font-family: 'fira_sanslight';
+	font-weight: 600;
+	color: #fff;
+	font-size: 13px;
+
+
+}
+.b-jobs__item:hover .b-jobs__item-bg{
+	cursor: pointer;
+	display: table-cell;
+	vertical-align: middle;
+
+
+
+}
+
+.b-jobs__item-foto {
+	width: 180px;
+	height: 129px;
+	
+
+}
+
+.b-jobs__item.new .b-jobs__item-foto {
+	background: #edf8fc url('../img/add-img.png') no-repeat 75px 35px;
+	width: 180px;
+	height: 125px;
+	border: 2px dashed #3ba8c0;
+	border-radius: 6px 6px 6px 6px;
+	position: relative;
+}
+.b-jobs__item.new .b-jobs__item-foto p {
+	position: absolute;
+	top:80px;
+	left:30px;
+	margin:0;
+	color:#3ba8c0;
+	font-family: 'fira_sanslight';
+	font-weight: 600;
+	font-size: 13;
+}
+
+.b-jobs__item-foto-img {
+	height: 125px;
+	width: 180px;
+	border: 2px solid #3ba8c0;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.b-jobs__item-link, .b-jobs__item-desc {
+	text-align: center;
+	font-family: 'fira_sanslight';
+	font-weight: 600;
+}
+.b-jobs__item-link {
+	
+}
+.b-jobs__item-link-addr {
+	
+	font-style: italic;
+	font-size: 13px;
+	text-decoration: none;
+	color: #3ba8c0;
+	
+}
+.b-jobs__item-desc  {
+	font-style: normal;
+	font-size: 15px;
+	color: #687078;
+	padding: 10px;
+}
 /* clear _____________________________________________________________________*/
 .clearfix:before,
 .clearfix:after {
