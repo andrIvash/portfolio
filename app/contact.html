@@ -26,7 +26,7 @@
 		<!-- endbower -->
 	<!-- endbuild -->
 	
-	<title>anivash.com - Обо мне</title>
+	<title>anivash.com - Связаться со мной</title>
 	
 </head>
 <body>
@@ -63,13 +63,13 @@
 				<aside class="b-sidebar">
 					<nav class="b-navigation">
 						<ul class="b-navigation__items">
-							<li class="b-navigation__item active">
+							<li class="b-navigation__item ">
 								<a href="index.html" class="b-navigation__item-link about-link">Обо мне</a>
 							</li>
 							<li class="b-navigation__item">
 								<a href="job.html" class="b-navigation__item-link jobs-link">Мои работы</a>
 							</li>
-							<li class="b-navigation__item ">
+							<li class="b-navigation__item active">
 								<a href="contact.html" class="b-navigation__item-link contact-link">Связаться со мной</a>
 							</li>
 						</ul>	
@@ -91,81 +91,41 @@
 						</ul>
 					</address>
 				</aside>
-				<div class="b-content ">
-					<section class="b-content__section">
+				<div class="b-content contact-page">
+					<section class="b-content__section b-content__contact-section">
 						<div class="b-content__section-header">
-							<h2>Основная информация</h2>
+							<h2>У вас интересный проект ? Напишите мне</h2>
 						</div>
-						<div class="b-content__section-article">
-							<div class="b-my-image">
-								<img src="img/foto.jpg"  class="b-my-image__foto" alt="андрей иващенко">
-							</div>
-							<ul class="b-privat-info clearfix">
-								<li class="b-privat-info__item ">
-									<div class="b-privat-info__item-query">Меня зовут: </div>
-									<div class="b-privat-info__item-data my-name">Иващенко Андрей</div>
-								</li>
-								<li class="b-privat-info__item ">
-									<div class="b-privat-info__item-query">Мой возраст: </div>
-									<div class="b-privat-info__item-data">35 лет</div>
-								</li>
-								<li class="b-privat-info__item ">
-									<div class="b-privat-info__item-query">Мой город: </div>
-									<div class="b-privat-info__item-data">Киев, Украина</div>
-								</li>
-								<li class="b-privat-info__item ">
-									<div class="b-privat-info__item-query">Моя специализация: </div>
-									<div class="b-privat-info__item-data">FRONTEND разработчик</div>
-								</li>
-								<li class="b-privat-info__item ">
-									<div class="b-privat-info__item-query">Ключевые навыки: </div>
-									<div class="b-privat-info__item-data ">
-										<ul class="b-key-list ">
-											<li class="b-key-list__item">html</li>
-											<li class="b-key-list__item">css</li>
-											<li class="b-key-list__item">javascript</li>
-											<li class="b-key-list__item">gulp</li>
-											<li class="b-key-list__item">git</li>
-											
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</section>
-					<section class="b-content__section">
-						<div class="b-content__section-header">
-							<h2>Опыт работы</h2>
-						</div>
-						<div class="b-content__section-article">
-							<ul class="b-work-info">
-								<li class="b-work-info__item">
-									<div class="b-work-info__item-where">ДНМУ г.Донецк, it-assistent</div>
-									<div class="b-work-info__item-when">2010-2014</div>
-								</li>
-								<li class="b-work-info__item">
-									<div class="b-work-info__item-where">Freelance г. Киев</div>
-									<div class="b-work-info__item-when">2014 - сегодняшний день</div>
-								</li>
-								
-							</ul>
-						</div>
-					</section>
-					<section class="b-content__section">
-						<div class="b-content__section-header">
-							<h2>Образование</h2>
-						</div>
-						<div class="b-content__section-article">
-							<ul class="b-study-info">
-								<li class="b-study-info__item uni-study">
-									<div class="b-study-info__item-where ">ДНМУ г.Донецк</div>
-									<div class="b-study-info__item-when">1996-2002</div>
-								</li>
-								<li class="b-study-info__item course-study">
-									<div class="b-study-info__item-where ">КA "Step" г. Донецк </div>
-									<div class="b-study-info__item-when">2002-2004</div>
-								</li>
-							</ul>
+						<div class="b-content__section-article ">
+							<form class="b-contact-form">
+								<div class="b-contact-form__group">	
+									<label for="name" class="b-contact-form__group-label">Имя</label>
+									<span class="error-tooltip arrow-left">Вы не ввели имя</span>
+									<input type="text" name="name" id="name" class="b-contact-form__group-data error" placeholder="Как к Вам обращаться">
+								</div>
+								<div class="b-contact-form__group">	
+									<label for="work" class="b-contact-form__group-label">Email</label>
+									<span class="error-tooltip arrow-right">Вы не ввели email</span>
+									<input type="text" name="work" id="work" class="b-contact-form__group-data error"placeholder="Куда мне писать">
+								</div>
+								<div class="b-contact-form__group-textarea error">	
+									<label for="textarea" class="b-contact-form__group-label">Сообщение</label>
+									<span class="error-tooltip arrow-left text">Ваш вопрос</span>
+									<textarea  name="textarea" id="textarea" placeholder="Кратко в чем суть"></textarea>
+								</div>
+								<div class="b-contact-form__group-capcha clearfix">	
+									<label for="capcha" class="b-contact-form__group-label">Введите код указанный на картинке</label>
+									<div class="b-contact-form__group-capcha-sign">E0Ed3r</div>
+									<span class="error-tooltip arrow-right code">Вы не ввели код</span>
+									<input type="text" class="b-contact-form__group-capcha-enter error" name="capcha" id="capcha" placeholder="Введите код">
+								</div>
+								<div class="b-contact-form__group-button">	
+									<input type="submit" class="b-contact-form__group-button submit" value="Отправить">
+									<input type="reset" class="b-contact-form__group-button reset" value="Очистить">
+								</div>
+							</form>
+
+
 						</div>
 					</section>
 				</div>	

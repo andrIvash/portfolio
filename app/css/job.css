@@ -1,0 +1,170 @@
+/* job -page _____________________________________________________________________*/
+.b-content.job-page .b-content__section{
+	min-height: 846px;
+}
+.b-content__job-section {
+	/*padding-top: 29px;*/
+}
+.b-jobs { 
+	margin: 0;
+	padding-left: 20px;
+	padding-top: 30px;
+
+}
+.b-jobs__item {
+	display: inline-block;
+	margin-left: 30px;
+	width: 180px;
+	margin-bottom: 20px;
+	/*float: left;*/
+	position: relative;
+	vertical-align: top;
+	
+}
+.b-jobs__item:first-child, .b-jobs__item:nth-child(4) {
+	margin-left: 0px;
+}
+.b-jobs__item-bg {
+	position: absolute;
+	margin:0;
+	top:0;
+	left:0;
+	width: 184px;
+	z-index: 99;
+	display: none;
+	background-color: rgba( 1, 108, 164, 0.549 );
+	border-radius: 6px 6px 6px 6px;
+	text-align: center;
+	padding: 55px 0; 
+	font-family: 'fira_sanslight';
+	font-weight: 600;
+	color: #fff;
+	font-size: 13px;
+
+
+}
+.b-jobs__item:hover {
+	cursor: pointer;
+}
+
+.b-jobs__item:hover .b-jobs__item-bg{
+	display: block;
+}
+
+.b-jobs__item-foto {
+	width: 180px;
+	height: 129px;
+	
+
+}
+
+.b-jobs__item.new .b-jobs__item-foto {
+	background: #edf8fc url('../img/add-img.png') no-repeat 75px 35px;
+	width: 180px;
+	height: 125px;
+	border: 2px dashed #3ba8c0;
+	border-radius: 6px 6px 6px 6px;
+	position: relative;
+}
+.b-jobs__item.new .b-jobs__item-foto p {
+	position: absolute;
+	top:80px;
+	left:30px;
+	margin:0;
+	color:#3ba8c0;
+	font-family: 'fira_sanslight';
+	font-weight: 600;
+	font-size: 13;
+}
+
+.b-jobs__item-foto-img {
+	height: 125px;
+	width: 180px;
+	border: 2px solid #3ba8c0;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.b-jobs__item-link, .b-jobs__item-desc {
+	text-align: center;
+	font-family: 'fira_sanslight';
+	font-weight: 600;
+}
+.b-jobs__item-link {
+	
+}
+.b-jobs__item-link-addr {
+	
+	font-style: italic;
+	font-size: 13px;
+	text-decoration: none;
+	color: #3ba8c0;
+	
+}
+.b-jobs__item-desc  {
+	font-style: normal;
+	font-size: 15px;
+	color: #687078;
+	padding: 10px;
+}
+
+/* add site popup_____________________________________________________________________*/
+
+.popup__overlay {
+    position: fixed;
+    left:  0;
+    top:  0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    text-align: center;
+    background-color: rgba(126,140,153,0.5);
+  }
+.popup {
+    width: 360px;
+    height: 500px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+} 
+.popup__overlay:after {
+    display: inline-block;
+    width:  0;
+    height: 100%;
+    vertical-align: middle;
+    content: ''
+} 
+.form-add-site {
+	border-radius: 6px 6px 0px 0px;
+
+}
+
+.form-add-header {
+	position: absolute;
+	border-radius: 6px 6px 0px 0px;
+	background-color: #eff3f7;
+	color: #3ba8c0;
+	border-bottom: 10px solid #3ba8c0;
+	width: 360px;
+	padding-top: 20px;
+} 
+.form-add-header h2 {
+	font-family: 'fira_sansbook';
+    font-size: 27px;
+    font-weight: normal;
+    margin: 0;
+}
+.form-add-content {
+	padding-top: 80px;
+
+}
+.form-add-section {
+	width: 320px;
+	margin: 0 auto;
+}
+.form-add-label {
+	display: block;
+	text-align: left;
+}
+.form-add-data {
+	width: 320px;
+}

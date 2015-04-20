@@ -5,7 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
     <!-- build:css css/vendor.css -->
 		<!-- bower:css -->
 		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
@@ -14,6 +14,8 @@
 	<!-- build:css css/common.css -->
 		<link rel="stylesheet" href="css/fira.css" />
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/job.css" />
+		<link rel="stylesheet" href="css/contact.css" />
 		<link rel="stylesheet" href="css/sprite.css" />
 	<!-- endbuild -->
 	<!-- build:js js/vendor.js -->
@@ -24,45 +26,51 @@
 		<!-- endbower -->
 	<!-- endbuild -->
 	
-	<title>Document</title>
+	<title>anivash.com - Мои работы</title>
 	
 </head>
 <body>
+<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 	<div class="wrapper ">
 		<header class="b-page-header">
-			<div class="b-logo">
-				<a href="index.html" class="b-logo__image"> 
-					<img title="anivash" src="img/logo.png" height="42" width="243">
-				</a>
+			<div class="b-header-container">
+				<div class="b-logo">
+					<a href="index.html" class="b-logo__image"> 
+						<img title="anivash" src="img/logo.png" alt="anivash.com">
+					</a>
+				</div>
+				<ul class="b-socials">
+					<li class="b-socials__icon">
+						<a href="#" class="b-social-link sprite sprite-vk-hover"></a>
+					</li>
+					<li class="b-socials__icon">
+						<a href="#" class="b-social-link sprite sprite-twitter"></a>
+					</li>
+					<li class="b-socials__icon" >
+						<a href="#" class="b-social-link sprite sprite-fb"></a>
+					</li>
+					<li class="b-socials__icon">
+						<a href="#" class="b-social-link sprite sprite-git"></a>
+					</li>
+				</ul>
 			</div>
-			<ul class="b-socials">
-				<li class="b-socials__icon">
-					<a href="#" class="b-social-link sprite sprite-vk-hover"></a>
-				</li>
-				<li class="b-socials__icon">
-					<a href="#" class="b-social-link sprite sprite-twitter"></a>
-				</li>
-				<li class="b-socials__icon" >
-					<a href="#" class="b-social-link sprite sprite-fb"></a>
-				</li>
-				<li class="b-socials__icon">
-					<a href="#" class="b-social-link sprite sprite-git"></a>
-				</li>
-			</ul>
 		</header>
 		<div class="b-page-content  ">
-			<div class="b-main-content clearfix ">
+			<div class="b-page-content-container">
+			<div class="b-main-content clearfix">
 				<aside class="b-sidebar">
 					<nav class="b-navigation">
 						<ul class="b-navigation__items">
-							<li class="b-navigation__item ">
+							<li class="b-navigation__item">
 								<a href="index.html" class="b-navigation__item-link about-link">Обо мне</a>
 							</li>
 							<li class="b-navigation__item active">
 								<a href="job.html" class="b-navigation__item-link jobs-link">Мои работы</a>
 							</li>
-							<li class="b-navigation__item disable">
-								<a href="#" class="b-navigation__item-link contact-link">Связаться со мной</a>
+							<li class="b-navigation__item ">
+								<a href="contact.html" class="b-navigation__item-link contact-link">Связаться со мной</a>
 							</li>
 						</ul>	
 					</nav>
@@ -84,12 +92,13 @@
 					</address>
 				</aside>
 				<div class="b-content job-page">
-					<section class="b-content__section">
+					<section class="b-content__section b-content__job-section">
 						<div class="b-content__section-header">
-							<h2>Основная информация</h2>
+							<h2>Мои работы</h2>
 						</div>
 						<div class="b-content__section-article ">
-							<ul class="b-jobs ">
+
+							 <ul class="b-jobs ">
 								<li class="b-jobs__item">
 									<div class="b-jobs__item-bg">Подробнее...</div>
 									<div class="b-jobs__item-foto">
@@ -112,13 +121,7 @@
 									<div class="b-jobs__item-link"><a href="ex.ua" class="b-jobs__item-link-addr">ex.ua</a></div>
 									<div class="b-jobs__item-desc">Очень крутой проект Две строки <div>
 								</li>
-								<li class="b-jobs__item">
-									<div class="b-jobs__item-foto">
-										<img src="img/projects/1.png" class="b-jobs__item-foto-img" alt="www.ex.ua" >
-									</div>
-									<div class="b-jobs__item-link"><a href="ex.ua" class="b-jobs__item-link-addr">ex.ua</a></div>
-									<div class="b-jobs__item-desc">Очень крутой проект Две строки  </div>
-								</li>
+								
 								<li class="b-jobs__item">
 									<div class="b-jobs__item-foto">
 										<img src="img/projects/1.png" class="b-jobs__item-foto-img" alt="www.ex.ua" >
@@ -132,10 +135,12 @@
 										<p>Добавить проект</p>
 									</div>
 								</li>
-							</ul>
+							</ul> 
 						</div>
 					</section>
 				</div>	
+			
+			</div>
 			</div>
 		</div>
 		<div class="b-page-footer">
