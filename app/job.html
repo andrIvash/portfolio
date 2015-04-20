@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="css/job.css" />
 		<link rel="stylesheet" href="css/contact.css" />
 		<link rel="stylesheet" href="css/sprite.css" />
+		<link rel="stylesheet" href="css/login.css" />
 	<!-- endbuild -->
 	<!-- build:js js/vendor.js -->
 		<!-- bower:js -->
@@ -145,14 +146,50 @@
 		</div>
 		<div class="b-page-footer">
 			<div class="b-user-login">
-				<a href="#" class="b-user-login__link sprite sprite-lock"></a>
+				<a href="login.html" class="b-user-login__link sprite sprite-lock"></a>
 			</div>
 			<div class="b-copyright">
 				&copy; 2015, Это мой сайт, пожалуйста не копируйте и не воруйте его
 			</div>
 		</div>
 	</div>
-	
+	<div class="popup__overlay">
+    	<div class="popup">
+    		<div class="form-add-header">
+				<h2>Добавление проекта</h2>
+				<img class=form-add-exit src="img/exit.png">
+			</div>
+			<div class="form-add-content">
+	    		<form class="form-add-site">
+					<div class="form-add-section">
+						<label for="projectname" class="form-add-label">Название проекта</label>
+						<span class="error-tooltip arrow-left add">Вы не ввели название</span>
+						<input type="text" name="project" id="projectname" class="form-add-data" placeholder="Введите название">
+					</div>
+					<div class="form-add-section">
+						<label for="projectimg" class="form-add-label">Картинка проекта</label>
+						<span class="error-tooltip arrow-left add">Вы не загрузили картинку</span>
+						<input type="text" name="projectimg" id="projectimg" class="form-add-data " placeholder="Загрузите изображение">
+						<img class="img-download" src="img/download.png">
+					</div>
+					<div class="form-add-section">
+						<label for="projecturl" class="form-add-label">URL проекта</label>
+						<span class="error-tooltip arrow-left add">Вы не ввели URL проекта</span>
+						<input type="text" name="projecturl" id="projecturl" class="form-add-data" placeholder="Добавьте ссылку">
+					</div>
+					<div class="form-add-section">
+						<label for="projectdesc" class="form-add-label">Описание</label>
+						<span class="error-tooltip arrow-left add">Вы не ввели описание</span>
+						<textarea name="projectdesc" id="projectdesc" class="form-add-data textarea error" placeholder="Пара слов о Вашем проекте"></textarea>
+					</div>
+					<div class="form-add-section">
+						<input type="submit" class="form-add-button submit" value="Отправить">
+					</div>
+					
+				</form>
+			</div>
+    	</div>
+	</div>
 
 
 
