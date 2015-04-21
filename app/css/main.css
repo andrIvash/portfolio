@@ -68,11 +68,49 @@ html {
 .b-socials__icon:first-child {
 	margin-left: 0;
 }
-.b-social-link {
- 
-}
+
 .b-social-link:first-child {
   
+}
+.b-social-link__vk {
+	width: 47px;
+    height: 47px;
+    background-position: -5px -119px;
+}
+.b-social-link__vk:hover {
+	width: 47px;
+    height: 47px;
+    background-position: -62px -119px;
+}
+.b-social-link__fb {
+	width: 47px;
+    height: 47px;
+    background-position: -5px -5px;
+}
+.b-social-link__fb:hover {
+	width: 47px;
+    height: 47px;
+    background-position: -62px -5px;
+}
+.b-social-link__tw {
+	width: 47px;
+    height: 47px;
+    background-position: -149px -5px;
+}
+.b-social-link__tw:hover {
+	width: 47px;
+    height: 47px;
+    background-position: -149px -62px;
+}
+.b-social-link__git {
+	width: 47px;
+    height: 47px;
+    background-position: -5px -62px;
+}
+.b-social-link__git:hover {
+	width: 47px;
+    height: 47px;
+    background-position: -62px -62px;
 }
 /* wrapper content _____________________________________________________________________*/
 .b-page-content-container {
@@ -427,6 +465,17 @@ html {
 	float:left;
 	width:32px;
 }
+.b-user-login__link {
+	width: 20px;
+    height: 32px;
+    background-position: -119px -5px;
+}
+.b-user-login__link:hover {
+	width: 20px;
+    height: 32px;
+    background-position: -119px -47px;
+}
+
 .b-copyright {
 	text-align: center;
 	padding-top: 28px;
@@ -445,4 +494,16 @@ html {
 
 .clearfix:after {
     clear: both;
+}
+
+/* hide links _____________________________________________________________________*/
+.text-hide {
+   text-indent: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+}
+.logo-hide {
+	 font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
 }
