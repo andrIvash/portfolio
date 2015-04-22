@@ -133,7 +133,7 @@
 								</li>
 								
 								<li class="b-jobs__item new">
-									<div class="b-jobs__item-foto">
+									<div class="b-jobs__item-foto" id="add-site">
 										<p>Добавить проект</p>
 									</div>
 								</li>
@@ -158,10 +158,26 @@
     	<div class="popup">
     		<div class="form-add-header">
 				<h2>Добавление проекта</h2>
-				<img class=form-add-exit src="img/exit.png">
+				<img class="form-add-exit" src="img/exit.png" id="add-site-exit">
 			</div>
 			<div class="form-add-content">
 	    		<form class="form-add-site">
+	    			<div class="form-add-section block-info">
+	    				<div class="form-info success">
+							<h2 class="info-header">Ура!<span class="info-exit succ">x</span></h2>
+							<p class="info-msg">Проект успешно добавлен.</p>
+						</div>
+						<div class="form-info fail">
+							<h2 class="info-header">Ошибка!<span class="info-exit err">x</span></h2>
+							<p class="info-msg">Невозможно добавить проект.</p>
+						</div>
+					</div>
+
+					<div class="form-add-section">
+						<label for="projectname" class="form-add-label">Название проекта</label>
+						<span class="error-tooltip arrow-left add">Вы не ввели название</span>
+						<input type="text" name="project" id="projectname" class="form-add-data" placeholder="Введите название">
+					</div>
 					<div class="form-add-section">
 						<label for="projectname" class="form-add-label">Название проекта</label>
 						<span class="error-tooltip arrow-left add">Вы не ввели название</span>
@@ -170,8 +186,8 @@
 					<div class="form-add-section">
 						<label for="projectimg" class="form-add-label">Картинка проекта</label>
 						<span class="error-tooltip arrow-left add">Вы не загрузили картинку</span>
-						<input type="text" name="projectimg" id="projectimg" class="form-add-data " placeholder="Загрузите изображение">
-						<img class="img-download" src="img/download.png">
+						<input type="text" name="projectimg" id="projectimg" class="form-add-data img-download" placeholder="Загрузите изображение">
+						
 					</div>
 					<div class="form-add-section">
 						<label for="projecturl" class="form-add-label">URL проекта</label>
@@ -181,7 +197,7 @@
 					<div class="form-add-section">
 						<label for="projectdesc" class="form-add-label">Описание</label>
 						<span class="error-tooltip arrow-left add">Вы не ввели описание</span>
-						<textarea name="projectdesc" id="projectdesc" class="form-add-data textarea error" placeholder="Пара слов о Вашем проекте"></textarea>
+						<textarea name="projectdesc" id="projectdesc" class="form-add-data textarea " placeholder="Пара слов о Вашем проекте"></textarea>
 					</div>
 					<div class="form-add-section">
 						<input type="submit" class="form-add-button submit" value="Отправить">

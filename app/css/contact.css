@@ -46,12 +46,15 @@
 }
 .b-contact-form__group-data {
 	width: 178px;
-	height: 37px;
 	border: 1px #48cbe8 solid;
 	border-radius: 4px 4px 4px 4px;
 	position: relative;
-	padding:10px 0 0 10px;
+	padding:0px 0 0 10px;
 	font-size: 12px;
+	height: 35px;
+	color: #adb1bd;
+	padding-left: 10px;
+
 
 
 }
@@ -68,12 +71,6 @@
 	position: relative;
 	
 }
-.b-contact-form__group-textarea.error textarea{
-	background-color:#fad2d1;
-	border-radius: 4px 4px 4px 4px;
-	border: 1px #f97e76 solid;
-	font-size: 12px;
-}
 
 .b-contact-form__group-textarea textarea {
 	width: 390px;
@@ -81,9 +78,19 @@
 	border: 1px #48cbe8 solid;
 	border-radius: 4px 4px 4px 4px;
 	font-size: 12px;
-	padding-left: 10px;
 	padding-top: 10px;
+	padding-left: 10px;
 }
+
+.b-contact-form__group-data.error.textarea {
+	background-color:#fad2d1;
+	border-radius: 4px 4px 4px 4px;
+	border: 1px #f97e76 solid;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
 
 /*_________________________________________________________________________*/
 
@@ -95,7 +102,7 @@
 }
 
 .b-contact-form__group-capcha label {
-	padding-top: 8px;
+	padding-top: 12px;
 	font-size: 15px;
 }
 
@@ -113,7 +120,7 @@
 	padding-left: 22px;
 }
 
-.b-contact-form__group-capcha-enter {
+.b-contact-form__group-data.capcha-enter {
 	display: inline-block;
 	height: 26px;
 	width: 175px;
@@ -123,10 +130,10 @@
 	border: 1px #48cbe8 solid;
 	border-radius: 4px 4px 4px 4px;
 }
-.b-contact-form__group-capcha-enter.error {
+.b-contact-form__group-data.error.capcha-enter {
 	border: 1px #f97e76 solid;
 	border-radius: 4px 4px 4px 4px;
-
+	
 }
 /*_________________________________________________________________________*/
 
@@ -167,7 +174,7 @@
 
 
 .error-tooltip{
-	display: block;
+	display: none;
 }
 .arrow-left {
 	height: 26px;

@@ -172,6 +172,7 @@ html {
   	position: absolute;
   	display: block;
   	top: -2px;
+  	
 }
 .b-navigation__item:nth-child(2):before {
 	
