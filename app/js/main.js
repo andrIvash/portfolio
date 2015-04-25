@@ -36,7 +36,18 @@
 		// Обработка нового ввода в input формы .form-add-data
 		function _newEnter (e) {
 			e.preventDefault();
-			var input = $( e.target );
+			var input = $( e.target ),
+				success = $('.success'),
+			    fail = $('.fail');
+			
+			if(success.is(':visible')) {
+				success.hide();
+			}
+
+			if( fail.is(':visible')) {
+				 fail.hide();
+			}
+
 			if (input.hasClass( 'error' )) {
 				input.removeClass('error');
 				input.prev('.error-tooltip').hide();
@@ -47,25 +58,37 @@
 		function _checkResult(e){
 			e.preventDefault();
 			
-			var formData = $('.form-add-data');
-			var cheker = false;
+			var formData = $('.form-add-data'),
+			    cheker = true,
+			    success = $('.success'),
+			    fail = $('.fail');
 			
 			formData.each(function(i){
 				if($( this ).val().length === 0 && !$( this ).hasClass( 'error' )) {
 					$(this).addClass('error');
 					$(this).prev('.error-tooltip').show();
+					cheker = false
 					
 				} 
 			})
-			
+
+			if(cheker) {
+				if(success.is(':hidden')) {
+				success.show();
+				formData.each(function(){
+					$( this ).val('');
+				})
+
+				} 
+			}
 		}
 		
 		function _infoExit(e) {
 			e.preventDefault();
 
-			var exitSign = $( e.target );
-			var formInfoSuccess = $('.form-info.success');
-			var formInfoFail = $('.form-info.fail');
+			var exitSign = $( e.target ),
+			    formInfoSuccess = $('.form-info.success'),
+			    formInfoFail = $('.form-info.fail');
 
 			if(exitSign.hasClass('succ') && formInfoSuccess.is(':visible')) {
 				formInfoSuccess.hide();
@@ -141,7 +164,18 @@
 		// Обработка нового ввода в input формы .b-contact-form__group-data
 		function _newEnter (e) {
 			e.preventDefault();
-			var input = $( e.target );
+			var input = $( e.target ),
+				success = $('.success'),
+			    fail = $('.fail');
+			
+			if(success.is(':visible')) {
+				success.hide();
+			}
+
+			if( fail.is(':visible')) {
+				 fail.hide();
+			}
+
 			if (input.hasClass( 'error' )) {
 				input.removeClass('error');
 				input.prev('.error-tooltip').hide();
@@ -152,15 +186,28 @@
 		function _checkResult(e){
 			e.preventDefault();
 			
-			var formData = $('.b-contact-form__group-data');
+			var formData = $('.b-contact-form__group-data'),
+			    success = $('.success'),
+			    fail = $('.fail'),
+			    cheker = true;
 			
 			formData.each(function(i){
 				if($( this ).val().length === 0 && !$( this ).hasClass( 'error' )) {
 				$(this).addClass('error');
 				$(this).prev('.error-tooltip').show();
+				cheker = false;
 				}
 			})
 			
+			if(cheker) {
+				if(success.is(':hidden')) {
+				success.show();
+				formData.each(function(){
+					$( this ).val('');
+				})
+
+				} 
+			}
 		}
 
 		// Обработка ресета формы .b-contact-form
@@ -188,9 +235,39 @@
 
 	}());
 
+	var FileInput = (function(){
+
+		// Подключаем прослушку событий
+		function _setUpListners(){
+			$('#projectimg').on('change', _addImage)
+			
+		}
+
+		// Обработка нового ввода в input uploadfile формы .form-add-site
+		function _addImage (e) {
+			var fileInput = $(this).val().split('\\').pop(),
+			    textBox = $('#text-file-box'); 
+
+			textBox.val(fileInput);
+			if(textBox.hasClass( 'error' )) {
+				textBox.removeClass('error');
+			}
+
+			
+		}
+	// Возвращаем в глобальную область видимости
+		return {
+			init: function () {
+				_setUpListners();
+			}
+		}
+
+	}());
+
 AddSite.init();
 Login.init();
 Contact.init();
+FileInput.init();
 
 
 

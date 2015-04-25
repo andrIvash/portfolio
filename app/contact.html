@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,7 +27,7 @@
 		<!-- endbower -->
 	<!-- endbuild -->
 	
-	<title>anivash.com - Связаться со мной</title>
+	<title>anivash.com - Обо мне</title>
 	
 </head>
 <body>
@@ -40,7 +40,7 @@
 				<div class="b-logo">
 					<a href="index.html" class="b-logo__image logo-hide"> 
 						<img title="anivash" src="img/logo.png" alt="anivash.com">
-						anivash.com
+						<span class="logo-hide">anivash.com</span>
 					</a>
 				</div>
 				<ul class="b-socials">
@@ -74,6 +74,7 @@
 							<li class="b-navigation__item active">
 								<a href="contact.html" class="b-navigation__item-link contact-link">Связаться со мной</a>
 							</li>
+							
 						</ul>	
 					</nav>
 					<address class="b-contacts">
@@ -100,6 +101,16 @@
 						</div>
 						<div class="b-content__section-article ">
 							<form class="b-contact-form">
+								<div class="b-contact-form__group block-info">
+				    				<div class="form-info success">
+										<h2 class="info-header">Ура!<span class="info-exit succ">x</span></h2>
+										<p class="info-msg">Проект успешно добавлен.</p>
+									</div>
+									<div class="form-info fail">
+										<h2 class="info-header">Ошибка!<span class="info-exit err">x</span></h2>
+										<p class="info-msg">Невозможно добавить проект.</p>
+									</div>
+								</div>
 								<div class="b-contact-form__group">	
 									<label for="name" class="b-contact-form__group-label">Имя</label>
 									<span class="error-tooltip arrow-left">Вы не ввели имя</span>
@@ -121,7 +132,7 @@
 									<span class="error-tooltip arrow-right code">Вы не ввели код</span>
 									<input type="text" class="b-contact-form__group-data capcha-enter" name="capcha" id="capcha" placeholder="Введите код">
 								</div>
-								<div class="b-contact-form__group-button">	
+								<div class="b-contact-form__group-button clearfix">	
 									<input type="submit" class="b-contact-form__group-button submit" value="Отправить">
 									<input type="reset" class="b-contact-form__group-button reset" value="Очистить">
 								</div>
@@ -134,15 +145,16 @@
 			</div>
 			</div>
 		</div>
+		<div class="push"></div>
+	</div>
 		<div class="b-page-footer">
 			<div class="b-user-login">
-				<a href="login.html" class="b-user-login__link sprite "></a>
+				<a href="login.html" class="b-user-login__link sprite"></a>
 			</div>
 			<div class="b-copyright">
 				&copy; 2015, Это мой сайт, пожалуйста не копируйте и не воруйте его
 			</div>
 		</div>
-	</div>
 	
 
 

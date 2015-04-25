@@ -1,6 +1,6 @@
 /* job -page _____________________________________________________________________*/
 .b-content.job-page .b-content__section{
-	min-height: 846px;
+	min-height: 813px;
 }
 .b-content__job-section {
 	/*padding-top: 29px;*/
@@ -26,12 +26,12 @@
 }
 .b-jobs__item-bg {
 	position: absolute;
+	display: none;
 	margin:0;
 	top:0;
 	left:0;
 	width: 184px;
 	z-index: 99;
-	display: none;
 	background-color: rgba( 1, 108, 164, 0.9 );
 	border-radius: 6px 6px 6px 6px;
 	text-align: center;
@@ -43,11 +43,11 @@
 
 
 }
-.b-jobs__item:hover {
+.b-jobs__item-foto:hover {
 	cursor: pointer;
 }
 
-.b-jobs__item:hover .b-jobs__item-bg{
+.b-jobs__item-foto:hover .b-jobs__item-bg{
 	display: block;
 }
 
@@ -122,7 +122,7 @@
   }
 .popup {
     width: 360px;
-    height: 570px;
+    min-height: 520px;
     background-color: #fff;
     display: inline-block;
     vertical-align: middle;
@@ -184,13 +184,13 @@
 	font-weight: 600;
 }
 .form-add-data {
-	width: 320px;
 	height:38px;
 	border: 1px #48cbe8 solid;
 	border-radius: 4px 4px 4px 4px;
 	font-size: 12px;
 	color: #60d2eb;
-	padding-left: 5px;
+	padding-left: 10px;
+	width: 320px;
 	
 }
 .form-add-data.error, .form-add-data.textarea.error {
@@ -201,26 +201,58 @@
 .form-add-data.textarea {
 	height: 110px;
 	padding-top: 10px;
+	width: 315px;
 }
 
 .form-add-data::-webkit-input-placeholder {
 	color:#48cbe8;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 .form-add-data::-moz-placeholder {
 	color:#48cbe8;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 .form-add-data:-moz-placeholder {
 	color:#48cbe8;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 .form-add-data:-ms-input-placeholder {
 	color:#48cbe8;
-	padding-left: 10px;
+	padding-left: 5px;
+}
+.form-add-data.error::-webkit-input-placeholder {
+	color:#F97E76;
+	padding-left: 5px;
+}
+.form-add-data.error::-moz-placeholder {
+	color:#F97E76;
+	padding-left: 5px;
+}
+.form-add-data.error:-moz-placeholder {
+	color:#F97E76;
+	padding-left: 5px;
+}
+.form-add-data.error:-ms-input-placeholder {
+	color:#F97E76;
+	padding-left: 5px;
 }
 .img-download {
-	background: #fff url('../img/download.png') no-repeat 274px 0px;
+	/*position:relative;*/
+}
+.file-upload {
+	position:absolute;
+	top:30px;
+	width: 330px;
+	height: 40px;
+	opacity: 0;
+	z-index: 99;
+	left: 0px;
+
+}
+.project-img-button {
+	position:absolute;
+	top:30px;
+	left:280px;
 }
 .arrow-left.add {
 	right: 330px;
@@ -230,32 +262,38 @@
 	width: 140px;
 	height: 35px;
   	margin-top: 10px;
+  	margin-bottom: 30px;
 	text-align: center;
 	color: #fff;
 	font-size: 18px;
 	font-family: 'fira_sanslight';
+	border:none;
 	border-radius: 6px;
 	display: inline;
+	outline: none;
 }
 
 .form-add-button.submit:hover {
 	cursor: pointer;
+	border:none;
+	outline: none;
 }
 
 .form-add-button.submit {
 	background-color: #48cbe8;
 	border-bottom: 2px solid #3ba8c0;
+	outline: none;
 	
 }
 
 /* info block ----------------------------------------------------------------------------*/
 .form-add-section .block-info {
-	position: relative;
+	/*position: relative;*/
 }
 .form-info {
-	position: absolute;
+	/*position: absolute;
 	top:0px;
-	left:0;
+	left:0;*/
 	width: 320px;
 	margin: 0px auto;	
 	text-align: left;

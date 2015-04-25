@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,7 +27,7 @@
 		<!-- endbower -->
 	<!-- endbuild -->
 	
-	<title>anivash.com - Мои работы</title>
+	<title>anivash.com - Обо мне</title>
 	
 </head>
 <body>
@@ -40,7 +40,7 @@
 				<div class="b-logo">
 					<a href="index.html" class="b-logo__image logo-hide"> 
 						<img title="anivash" src="img/logo.png" alt="anivash.com">
-						anivash.com
+						<span class="logo-hide">anivash.com</span>
 					</a>
 				</div>
 				<ul class="b-socials">
@@ -74,6 +74,7 @@
 							<li class="b-navigation__item ">
 								<a href="contact.html" class="b-navigation__item-link contact-link">Связаться со мной</a>
 							</li>
+							
 						</ul>	
 					</nav>
 					<address class="b-contacts">
@@ -102,8 +103,8 @@
 
 							 <ul class="b-jobs ">
 								<li class="b-jobs__item">
-									<div class="b-jobs__item-bg">Подробнее...</div>
 									<div class="b-jobs__item-foto">
+										<div class="b-jobs__item-bg">Подробнее...</div>
 										<img src="img/projects/1.png" class="b-jobs__item-foto-img" alt="www.ex.ua" >
 									</div>
 									<div class="b-jobs__item-link"><a href="ex.ua" class="b-jobs__item-link-addr">ex.ua</a></div>
@@ -111,6 +112,7 @@
 								</li>
 								<li class="b-jobs__item">
 									<div class="b-jobs__item-foto">
+										<div class="b-jobs__item-bg">Подробнее...</div>
 										<img src="img/projects/1.png" class="b-jobs__item-foto-img" alt="www.ex.ua" >
 									</div>
 									<div class="b-jobs__item-link"><a href="ex.ua" class="b-jobs__item-link-addr">ex.ua</a></div>
@@ -118,6 +120,7 @@
 								</li>
 								<li class="b-jobs__item">
 									<div class="b-jobs__item-foto">
+										<div class="b-jobs__item-bg">Подробнее...</div>
 										<img src="img/projects/1.png" class="b-jobs__item-foto-img" alt="www.ex.ua" >
 									</div>
 									<div class="b-jobs__item-link"><a href="ex.ua" class="b-jobs__item-link-addr">ex.ua</a></div>
@@ -126,6 +129,7 @@
 								
 								<li class="b-jobs__item">
 									<div class="b-jobs__item-foto">
+										<div class="b-jobs__item-bg">Подробнее...</div>
 										<img src="img/projects/1.png" class="b-jobs__item-foto-img" alt="www.ex.ua" >
 									</div>
 									<div class="b-jobs__item-link"><a href="ex.ua" class="b-jobs__item-link-addr">ex.ua</a></div>
@@ -145,6 +149,8 @@
 			</div>
 			</div>
 		</div>
+		<div class="push"></div>
+	</div>
 		<div class="b-page-footer">
 			<div class="b-user-login">
 				<a href="login.html" class="b-user-login__link sprite"></a>
@@ -153,7 +159,6 @@
 				&copy; 2015, Это мой сайт, пожалуйста не копируйте и не воруйте его
 			</div>
 		</div>
-	</div>
 	<div class="popup__overlay">
     	<div class="popup">
     		<div class="form-add-header">
@@ -179,14 +184,11 @@
 						<input type="text" name="project" id="projectname" class="form-add-data" placeholder="Введите название">
 					</div>
 					<div class="form-add-section">
-						<label for="projectname" class="form-add-label">Название проекта</label>
-						<span class="error-tooltip arrow-left add">Вы не ввели название</span>
-						<input type="text" name="project" id="projectname" class="form-add-data" placeholder="Введите название">
-					</div>
-					<div class="form-add-section">
 						<label for="projectimg" class="form-add-label">Картинка проекта</label>
 						<span class="error-tooltip arrow-left add">Вы не загрузили картинку</span>
-						<input type="text" name="projectimg" id="projectimg" class="form-add-data img-download" placeholder="Загрузите изображение">
+						<input type="file" name="fileupload" id="projectimg" class="file-upload" placeholder="Загрузите изображение"  accept="image/jpeg,image/gif,image/x-png">
+						<input type="text" name="projectimg" id="text-file-box" class="form-add-data img-download" placeholder="Загрузите изображение">
+						<img class="project-img-button" src="img/download.png" >
 						
 					</div>
 					<div class="form-add-section">
