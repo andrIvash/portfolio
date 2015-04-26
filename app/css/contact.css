@@ -137,6 +137,9 @@
 	position:relative;
 }
 
+.g-recaptcha {
+	margin: 10px 50px;
+}
 .b-contact-form__group-capcha label {
 	padding-top: 12px;
 	font-size: 15px;

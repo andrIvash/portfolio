@@ -157,7 +157,7 @@
 		// Подключаем прослушку событий
 		function _setUpListners(){
 			$('.b-contact-form__group-data').on('click', _newEnter)
-			$('.b-contact-form').on('submit', _checkResult);
+			$('.submit').on('click', _checkResult);
 			$('.b-contact-form').on('reset', _resetInput);
 		}
 
@@ -184,9 +184,10 @@
 
 		// Обработка сабмита формы .b-contact-form
 		function _checkResult(e){
-			e.preventDefault();
+			// e.preventDefault();
 			
 			var formData = $('.b-contact-form__group-data'),
+				form = $('.b-contact-form'),
 			    success = $('.success'),
 			    fail = $('.fail'),
 			    cheker = true;
@@ -200,6 +201,7 @@
 			})
 			
 			if(cheker) {
+				form.submit();
 				if(success.is(':hidden')) {
 				success.show();
 				formData.each(function(){
@@ -207,6 +209,7 @@
 				})
 
 				} 
+
 			}
 		}
 

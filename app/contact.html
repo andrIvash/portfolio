@@ -25,10 +25,11 @@
 		<script src="bower/html5shiv/dist/html5shiv.js"></script>
 		<script src="bower/respond/dest/respond.src.js"></script>
 		<!-- endbower -->
+
 	<!-- endbuild -->
 	
 	<title>anivash.com - Обо мне</title>
-	
+			
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -100,7 +101,7 @@
 							<h2>У вас интересный проект ? Напишите мне</h2>
 						</div>
 						<div class="b-content__section-article ">
-							<form class="b-contact-form">
+							<form class="b-contact-form" action="php/action-contact.php" method="post">
 								<div class="b-contact-form__group block-info">
 				    				<div class="form-info success">
 										<h2 class="info-header">Ура!<span class="info-exit succ">x</span></h2>
@@ -128,9 +129,10 @@
 								</div>
 								<div class="b-contact-form__group-capcha clearfix">	
 									<label for="capcha" class="b-contact-form__group-label">Введите код указанный на картинке</label>
-									<div class="b-contact-form__group-capcha-sign">E0Ed3r</div>
+									<div class="g-recaptcha" data-sitekey="6Lfj6AUTAAAAAGFh2L16-8i2FAh41jym5-YvoU5p"></div>
+									<!-- <div class="b-contact-form__group-capcha-sign">E0Ed3r</div>
 									<span class="error-tooltip arrow-right code">Вы не ввели код</span>
-									<input type="text" class="b-contact-form__group-data capcha-enter" name="capcha" id="capcha" placeholder="Введите код">
+									<input type="text" class="b-contact-form__group-data capcha-enter" name="capcha" id="capcha" placeholder="Введите код"> -->
 								</div>
 								<div class="b-contact-form__group-button clearfix">	
 									<input type="submit" class="b-contact-form__group-button submit" value="Отправить">
@@ -159,10 +161,11 @@
 
 
 
-
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<!-- build:js js/common.js -->
 		<script src="js/main.js"></script>
 		<script src="js/plugins.js"></script>
 	<!-- endbuild -->
+
 </body>
 </html>

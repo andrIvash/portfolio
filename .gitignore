@@ -2,3 +2,4 @@ node_modules
 app/bower
 dist
 sftp-config.json
+app/.idea
