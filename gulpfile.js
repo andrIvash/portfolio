@@ -77,12 +77,20 @@ gulp.task('js', function () {
   .pipe(connect.reload());
 });
 
+//php
+gulp.task('php', function () {
+  gulp.src('./app/php/*.php')
+  .pipe(connect.reload());
+        
+});
 //watch
 gulp.task('watch', function () {
 	gulp.watch('bower.json', ['bower'])
   gulp.watch('./app/css/*.css', ['css'])
   gulp.watch('./app/js/*.js', ['js'])
+  gulp.watch(['./app/php/*.php'], ['php'])
 	gulp.watch(['./app/*.html'], ['html']);
+
 })
 //default
 gulp.task('default', ['connect', 'watch', 'bower'])

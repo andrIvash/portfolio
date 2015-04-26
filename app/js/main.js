@@ -64,12 +64,13 @@
 			    fail = $('.fail');
 			
 			formData.each(function(i){
-				if($( this ).val().length === 0 && !$( this ).hasClass( 'error' )) {
-					$(this).addClass('error');
-					$(this).prev('.error-tooltip').show();
-					cheker = false
-					
-				} 
+				if($( this ).val().length === 0) {
+					if (!$( this ).hasClass( 'error' )) {
+						$(this).addClass('error');
+						$(this).prev('.error-tooltip').show();
+					}
+					cheker = false;
+				}  
 			})
 
 			if(cheker) {
@@ -134,10 +135,13 @@
 			var formData = $('.form-login-data');
 			
 			formData.each(function(i){
-				if($( this ).val().length === 0 && !$( this ).hasClass( 'error' )) {
-				$(this).addClass('error');
-				$(this).prev('.error-tooltip').show();
-				}
+				if($( this ).val().length === 0) {
+					if (!$( this ).hasClass( 'error' )) {
+						$(this).addClass('error');
+						$(this).prev('.error-tooltip').show();
+					}
+					cheker = false;
+				}  
 			})
 			
 		}
@@ -157,7 +161,7 @@
 		// Подключаем прослушку событий
 		function _setUpListners(){
 			$('.b-contact-form__group-data').on('click', _newEnter)
-			$('.submit').on('click', _checkResult);
+			$('.b-contact-form').on('submit', _checkResult);
 			$('.b-contact-form').on('reset', _resetInput);
 		}
 
@@ -184,32 +188,38 @@
 
 		// Обработка сабмита формы .b-contact-form
 		function _checkResult(e){
-			// e.preventDefault();
+			e.preventDefault();
 			
 			var formData = $('.b-contact-form__group-data'),
-				form = $('.b-contact-form'),
+				form = $('#contact-form'),
 			    success = $('.success'),
 			    fail = $('.fail'),
-			    cheker = true;
+			    cheker = true,
+			    url = 'php/action-contact.php';
+			   
 			
 			formData.each(function(i){
-				if($( this ).val().length === 0 && !$( this ).hasClass( 'error' )) {
-				$(this).addClass('error');
-				$(this).prev('.error-tooltip').show();
-				cheker = false;
-				}
+				if($( this ).val().length === 0) {
+					if (!$( this ).hasClass( 'error' )) {
+						$(this).addClass('error');
+						$(this).prev('.error-tooltip').show();
+					}
+					cheker = false;
+				}  
 			})
 			
 			if(cheker) {
-				form.submit();
-				if(success.is(':hidden')) {
-				success.show();
-				formData.each(function(){
+				var  defObject = _ajaxForm(form, url);
+				defObject.done(function(ans){
+					if(success.is(':hidden')) {
+						success.show();
+					}
+					formData.each(function(){
 					$( this ).val('');
+					})
+					console.log(ans);
+					
 				})
-
-				} 
-
 			}
 		}
 
@@ -228,7 +238,24 @@
 
 		}
 
+	
+	// Универсальная функция ajax
+	function _ajaxForm(form, url){
 
+		var data = form.serialize(),
+
+			defObj = $.ajax({
+				type : "POST",
+				url : url,
+				dataType : "JSON",
+				data: data
+			}).fail(function(){
+				console.log('Проблемы на стороне сервера');
+			})
+
+		return defObj;
+	}
+	
 	// Возвращаем в глобальную область видимости
 		return {
 			init: function () {
@@ -254,6 +281,7 @@
 			textBox.val(fileInput);
 			if(textBox.hasClass( 'error' )) {
 				textBox.removeClass('error');
+				textBox.prev('.error-tooltip').hide();
 			}
 
 			

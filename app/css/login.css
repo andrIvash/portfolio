@@ -114,12 +114,15 @@
 	font-size: 34px;
 	font-family: 'fira_sanslight';
 	border-radius: 6px;
+	border:0;
+	outline:none;
 	margin-bottom: 24px;
 	
 }
 
 .form-login-button.submit:hover {
 	cursor: pointer;
+	border-bottom: none;
 }
 
 .form-login-button.submit {
