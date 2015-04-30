@@ -307,6 +307,9 @@ html {
 	float: right;
 	padding-top: 40px;
 	margin-right: 0px;
+	-moz-box-sizing: border-box; /* Для Firefox */  
+    box-sizing: border-box; /* Ширина блока с полями */
+    
 }
 .b-content__section {
 	border-radius: 6px 6px 6px 6px;
@@ -439,9 +442,12 @@ html {
 }
 
 .b-work-info__item {
-	background:url('../img/suit.png') no-repeat 20px center;
+	background-image: url('../img/suit.png'); 
+	background-repeat: no-repeat;
+	background-position: 20px center;
 	padding-left:85px;
 	margin-bottom: 7px; 
+
 }
 .b-work-info__item:last-child {
 	margin-bottom: 16px;
@@ -473,10 +479,16 @@ html {
 	margin-bottom:10px; 
 }
 .b-study-info__item.uni-study {
-	background:url('../img/course.png') no-repeat 18px center;
+	background-image: url('../img/course.png');
+	background-repeat: no-repeat;
+	background-position: 18px center;
+	
 }
 .b-study-info__item.course-study {
-	background:url('../img/study.png') no-repeat 25px center;
+	background-image: url('../img/study.png');
+	background-repeat: no-repeat;
+	background-position: 25px center;
+	
 }
 .b-study-info__item:last-child {
 	margin-bottom: 10px;

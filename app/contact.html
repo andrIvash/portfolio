@@ -24,11 +24,12 @@
 		<script src="bower/jquery/dist/jquery.js"></script>
 		<script src="bower/html5shiv/dist/html5shiv.js"></script>
 		<script src="bower/respond/dest/respond.src.js"></script>
+		
 		<!-- endbower -->
 
 	<!-- endbuild -->
-	
-	<title>anivash.com - Обо мне</title>
+		
+	<title>anivash.com - Связаться со мной</title>
 			
 </head>
 <body>
@@ -129,10 +130,10 @@
 								</div>
 								<div class="b-contact-form__group-capcha clearfix">	
 									<label for="capcha" class="b-contact-form__group-label">Введите код указанный на картинке</label>
-									<div class="g-recaptcha" data-sitekey="6Lfj6AUTAAAAAGFh2L16-8i2FAh41jym5-YvoU5p"></div>
-									<!-- <div class="b-contact-form__group-capcha-sign">E0Ed3r</div>
-									<span class="error-tooltip arrow-right code">Вы не ввели код</span>
-									<input type="text" class="b-contact-form__group-data capcha-enter" name="capcha" id="capcha" placeholder="Введите код"> -->
+									<div class="g-recaptcha" data-sitekey="6Lfj6AUTAAAAAGFh2L16-8i2FAh41jym5-YvoU5p" data-callback="checkCapcha()"></div>
+									<!-- <div class="b-contact-form__group-capcha-sign">E0Ed3r</div>-->
+									<span class="error-tooltip arrow-right code">Вы не ввели капчу</span>
+									<input type="text" class="b-contact-form__group-data capcha-enter" name="capcha" id="capcha" placeholder="Введите код" value="false"> 
 								</div>
 								<div class="b-contact-form__group-button clearfix">	
 									<input type="submit" class="b-contact-form__group-button submit" value="Отправить">
@@ -161,7 +162,7 @@
 
 
 
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src='https://www.google.com/recaptcha/api.js ' async defer></script>
 	<!-- build:js js/common.js -->
 		<script src="js/main.js"></script>
 		<script src="js/plugins.js"></script>

@@ -190,6 +190,10 @@
 		function _checkResult(e){
 			e.preventDefault();
 			
+			var checkCapcha = $('.capcha-enter');
+			console.log(checkCapcha.val());
+
+
 			var formData = $('.b-contact-form__group-data'),
 				form = $('#contact-form'),
 			    success = $('.success'),

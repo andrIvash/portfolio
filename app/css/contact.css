@@ -18,8 +18,9 @@
     text-align: center;
 }
 .b-contact-form{	
-	width: 402px;
-	margin: 90px auto;
+	width: 422px;
+	margin-top: 90px;
+	margin-left: 120px;
   	padding: 0px 0 50px 0;
 }
 .b-contact-form__group{
@@ -160,7 +161,7 @@
 }
 
 .b-contact-form__group-data.capcha-enter {
-	display: inline-block;
+	display: none;
 	height: 26px;
 	width: 175px;
 	margin-top: 23px;
